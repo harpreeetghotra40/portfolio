@@ -1,0 +1,31 @@
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
+  .intro-flex {
+    flex-direction: column;
+    .intro-img {
+      margin-top: 30px;
+    }
+    .intro-text {
+      order: 2;
+      margin-top: 30px;
+      button {
+        margin-top: 10px;
+        padding: 20px 0;
+        width: 100%;
+      }
+    }
+  }
+  // navbar styles
+  .navbar {
+    .logo {
+      width: 50px;
+    }
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+}

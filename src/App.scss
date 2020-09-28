@@ -1,0 +1,64 @@
+.intro-flex {
+  display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
+  align-items: center;
+  div {
+    flex: 1;
+  }
+  padding: 0 4%;
+}
+
+.intro-text {
+  padding: 2%;
+  button {
+    margin-top: 10px;
+    width: 200px;
+    border: none;
+    text-transform: uppercase;
+    color: white;
+    background-color: #376ac0;
+    padding: 15px 0;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+}
+
+.intro-img {
+  overflow: hidden;
+  padding: 0 2%;
+  img {
+    width: 100%;
+  }
+}
+
+h1 {
+  font-size: 40px;
+  color: #376ac0;
+  margin: 0;
+}
+
+h3 {
+  font-size: 24px;
+  color: #f76239;
+  margin: 0;
+}
+
+p {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+// Navbar styles
+.navbar {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 20px 6% 10px;
+  .logo {
+    width: 75px;
+  }
+}
