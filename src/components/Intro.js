@@ -16,7 +16,11 @@ const Intro = () => {
           >
             theBloc
           </a>
-          . I love front-end development and I'm a CSS nerd.
+          . I love front-end development and I'm a CSS nerd{" "}
+          <span role="img" aria-label="">
+            &#129299;
+          </span>
+          .
           {/* With experience in Ruby and JavaScript,{" "}
           <span className="nowrap">I have</span> created products that are
           enjoyable to use and are written in code that is maintainable. Working

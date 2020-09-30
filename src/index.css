@@ -5,6 +5,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #111;
+  cursor: url(./images/cursor.png), auto !important;
 }
 
 code {
@@ -20,4 +21,8 @@ code {
 
 .m-0 {
   margin: 0;
+}
+
+.pb-10 {
+  padding-bottom: 10px;
 }

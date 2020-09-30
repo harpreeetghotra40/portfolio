@@ -1,5 +1,6 @@
 $grid-space-gap: 24px;
 $grid-space-gap-sm: 12px;
+$grid-space-gap-lg: 36px;
 $light-border: #eaeaea;
 $shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.12);
 
@@ -18,19 +19,6 @@ $shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.12);
   padding: 2%;
   button {
     margin-top: 10px;
-    border: none;
-    text-transform: uppercase;
-    color: white;
-    background-color: #376ac0;
-    box-shadow: 0 4px 14px 0 rgba(0, 118, 255, 0.39);
-    padding: 0 5.5rem;
-    border-radius: 7px;
-    height: 3rem;
-    font-weight: bold;
-  }
-  button:hover {
-    background: rgba(0, 118, 255, 0.9);
-    box-shadow: 0 6px 20px rgba(0, 118, 255, 0.23);
   }
 }
 
@@ -76,11 +64,57 @@ a {
   color: #f76239;
   font-weight: bold;
   text-decoration: none;
-  cursor: pointer;
+  position: relative;
+  cursor: url(./images/cursor.png), auto !important;
 }
-
+a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #f76239;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+a:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
 button {
-  cursor: pointer;
+  text-transform: uppercase;
+  padding: 0 5.5rem;
+  background-color: white;
+  height: 3rem;
+  font-weight: bold;
+  color: #376ac0;
+  border: 2px solid #376ac0;
+  transition: color 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transform: perspective(1px) translateZ(0);
+  cursor: url(./images/cursor.png), auto !important;
+}
+button:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #376ac0;
+  transform: scaleX(0);
+  transform-origin: right center;
+  transition: transform 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+button:hover {
+  color: white;
+  text-decoration: none;
+}
+button:hover:before {
+  transform-origin: left center;
+  transform: scale(1);
 }
 button:focus {
   outline: 0;
@@ -102,24 +136,38 @@ button:focus {
 .showcase-container {
   padding-top: $grid-space-gap-sm;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  grid-gap: $light-border;
-  gap: $grid-space-gap-sm;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: $grid-space-gap;
   .work {
     position: relative;
-    border: 1px solid $light-border;
-    padding: $grid-space-gap;
     border-radius: 5px;
     text-align: left;
+    border: 1px solid #eaeaea;
+    padding: 24px;
+  }
+  .techlist {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    img {
+      max-width: 100px;
+      margin: 0 20px 0 0;
+    }
+    .tech {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-right: 3px;
+      font-weight: bold;
+    }
   }
   .image-container {
-    max-height: 200px;
+    max-height: 180px;
     overflow: hidden;
     margin-bottom: 10px;
+    border-radius: 5px;
   }
   img {
     width: 100%;
-    border-radius: 5px;
   }
 }
 

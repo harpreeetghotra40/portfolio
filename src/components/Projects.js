@@ -3,21 +3,18 @@ import React from "react";
 const myProjects = [
   {
     name: "WordsApp",
-    desc:
-      "Words Game: Come up with as many words as possible in the given time.",
+    desc: "An app to test your vocabulary",
     github: "https://github.com/JakubowskiA/WordsApp",
   },
   {
-    name: "WordsApp",
-    desc:
-      "Words Game: Come up with as many words as possible in the given time.",
-    github: "https://github.com/JakubowskiA/WordsApp",
+    name: "Deployable",
+    desc: "Explain your code in pics",
+    github: "https://github.com/harpreeetghotra40/deployable_app",
   },
   {
-    name: "WordsApp",
-    desc:
-      "Words Game: Come up with as many words as possible in the given time.",
-    github: "https://github.com/JakubowskiA/WordsApp",
+    name: "Calendar App",
+    desc: "Just a typical calendar app",
+    github: "https://github.com/harpreeetghotra40/calendar_app",
   },
 ];
 
@@ -33,10 +30,16 @@ const Projects = () => {
         {myProjects.map((project) => (
           <div className="project">
             <h3 className="m-0">{project.name}</h3>
-            <p className="pt-0">{project.desc}</p>
-            <a href={project.github} target="_blank" rel="noopener noreferrer">
-              github &#x2192;
-            </a>
+            <p className="pt-0 pb-10">{project.desc}</p>
+            <div>
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                github &#x2192;
+              </a>
+            </div>
           </div>
         ))}
       </div>
